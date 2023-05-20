@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fe7fa64c1b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="Top_header">
+
+        <div class="containr1">
+        <div class="left_side">
+            <div class="logo">
+               <a href="index.html" class="icon">
+                <i class="fa-brands fa-github"></i>
+               </a> 
+            </div>
+             <div class="search-box">
+                <input type="text" id="my_input" header_links placeholder="Search or jump to.."> 
+                <button onclick="submit_input()" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+    
+            <div class="header_links">
+               <ul>
+                <li><a href="">Pull requests</a></li>
+                <li><a href="">Issues</a></li>
+                <li><a href="">Codespaces</a></li>
+                <li><a href="">Marketplace</a></li>
+                <li><a href="">Explore</a></li>
+                <li><a href="">Comparing</a></li>
+               </ul>
+            </div>
+        </div>
+       
+        <div class="header_icon">
+            <div class="first">
+                <a href="" class="icon">
+                    <i class="fa-regular fa-bell"></i>
+                </a>
+            </div>
+            <div class="middle">
+                <a href="" class="icon">
+                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-caret-down"></i>
+            </a>
+            </div>
+            <div class="last" id="image_prof">
+                <a href=""><img id="small_img" src="./assets/img/avatar_github.png"></a>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+        </div>
+        </header>
+    
+        <!-- <header class="bottom_header">
+            <div class="item_center">
+                <ul>
+                    <li><a href="" class="iconheder2"><i class="fa-solid fa-book-open"></i> Overview</a></li>
+                    <li><a href="" class="iconheder2"><i class="fa-solid fa-book-bookmark"></i> Repositories</a></li>
+                    <li><a href="" class="iconheder2"><i class="fa-solid fa-table"></i> Projects</a></li>
+                    <li><a href="" class="iconheder2"><i class="fa-solid fa-cube"></i> Package</a></li>
+                    <li><a href="" class="iconheder2"><i class="fa-regular fa-star"></i> Stars</a></li>
+                </ul>
+            </div>
+        </header> -->
+
+        <main>
+                <div class="container">
+
+                   <!-- button + search -->
+
+                    <div class="row justify-content-center pt-3">
+                        <div class="input-group pb-4 pt-3 input_2compar ">
+                            <input type="text" class="form-control " id="user1_input" placeholder="input user...">
+                            <button class="btn btn-outline-secondary" type="button" onclick="user1_input()"><i class="fa fa-search"></i></button>
+                          </div>
+                    </div>
+                   
+
+                    <div class="row justify-content-around">
+                        <div class="col-md-4">
+
+                            <!-- card user 1 -->
+                    
+                            <div class="card cardusers" style="width: 18rem;" id="headerUser1">
+                                
+                                <p class="fs-4 text-center" id="lable1"></p>
+                                <img src="assets/img/avatar_github.png" class="card-img-top image_user_profile" alt="...">
+                                <div class="card-body">
+                                  <p class="fs-3 text-center usernamelable"></p>
+
+                                </div> 
+
+                              </div>
+
+                        </div>
+                        <!-- button compare -->
+                        <div class="col-md-4">
+
+                            <div class="row justify-content-center">
+                                <button type="button" class="btn btn-secondary compare-btn" onclick="comparing()"> Compare</button>
+                            </div>
+                        </div>
+
+
+                        <!--  card user 2  -->
+                        <div class="col-md-4">
+                          
+                            <div class="card cardusers" style="width: 18rem;" id="headerUser2">
+                                <p class="fs-4 text-center" id="lable2"></p>
+                                <img src="assets/img/avatar_github.png" class="card-img-top image_user_profile" alt="...">
+                                <div class="card-body">
+                                 
+                                  <p class="fs-3 text-center usernamelable"></p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    
+                    <!-- body user 1 -->
+                    <div class="row">
+                        <div class="col-md-4"id="body_user1">
+                            <!-- <p class="fs-5 atrib">name:</p>
+                            <p class="fs-5 atrib">location:</p>
+                            <p class="fs-5 atrib">email:</p>
+                            <p class="fs-5 atrib">followers:</p>
+                            <p class="fs-5 atrib">following:</p>
+                            <p class="fs-5 atrib">Repo</p> -->
+                        </div>
+
+                        <div class="col-4">
+                        </div>
+
+                        <!-- body user 2 -->
+                        <div class="col-md-4 " id="body_user2">
+                            <!-- <p class="fs-5 atrib ">name:</p>
+                            <p class="fs-5 atrib">location:</p>
+                            <p class="fs-5 atrib">email:</p>
+                            <p class="fs-5 atrib">followers:</p>
+                            <p class="fs-5 atrib">following:</p>
+                            <p class="fs-5 atrib">Repo</p> -->
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer>
+
+        </footer>
+</body>
+<script src="js/main.js"></script>
+</html>
