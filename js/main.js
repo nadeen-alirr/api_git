@@ -12,7 +12,7 @@ if(user_input == ''){
   return;
 }
   fetch(`https://api.github.com/users/${user_input}`, {
-    headers: { Authorization: `token ${myToken}` },
+    // headers: { Authorization: `token ${myToken}` },
   })
     .then((response) => response.json())
     .then((data) => {
@@ -29,7 +29,7 @@ if(user_input == ''){
     .catch((error) => console.error(error));
 
   fetch(`https://api.github.com/users/${user_input}/repos`, {
-    headers: { Authorization: `token ${myToken}` },
+    // headers: { Authorization: `token ${myToken}` },
   })
     .then((response) => response.json())
     .then((repos) => {
@@ -108,7 +108,7 @@ let array_user_info = [];
     }
 
     fetch(`https://api.github.com/users/${input_user1}`, {
-      headers: { Authorization: `token ${myToken}` },
+      // headers: { Authorization: `token ${myToken}` },
     })
       .then((response) => response.json())
       .then((user) => {
